@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+body{
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+header{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.4fr;
+    align-items: center;
+
+    box-shadow: 0px -1px 5px 1px black;
+    font-family: 'PT Serif', serif;
+
+    max-height: 72px;
+    padding-right: 20px;
+}
+#title{
+    padding-left: 30px;
+    font-style: italic;
+    font-weight: 700;
+    text-shadow: 0px 1px 1px black;
+
+    max-height: 34px;
+
+}
+.navBtns{
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.navBtn{
+    font-size: large;
+    justify-self: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navBtn:hover{
+    cursor: pointer;
+}
+.fa-bars{
+    visibility: hidden;
+    justify-self: flex-end;
+}
+.fa-bars:hover{
+    cursor: pointer;
+    color: cadetblue;
+}
+.innerMenu{
+    display: none;
+}
+
+main{
+    padding: 20px;
+    padding-left: 30px;
+
+    text-align: justify;
+
+    font-family: 'PT Serif', serif;
+
+}
+
+@media (orientation: portrait){
+    header{
+        grid-template-columns: 1.6fr 0.4fr;
+    }
+    .navBtns{
+        display: none;
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+    .innerMenu{
+        display: none;
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
+
+        background-color: white;
+
+        position: absolute;
+        top: 72px;
+        width: 100vw;
+
+        padding-left: 20px;
+        padding-bottom: 15px;
+
+        height: 200px;
+
+        font-family: 'PT Serif', serif;
+
+        box-shadow: 0px 5px 5px -4px black;
+    }
+    .menuItem{
+        width: 12%;
+    }
+    .menuItem:hover{
+        cursor: pointer;
+        padding-left: 10px;
+
+        color: darkcyan;
+        font-weight: bold;
+
+    }
+}
+
+@keyframes open{
+    from{transform: scaleY(0);}
+    to{transform: scaleY(1);}
+}
+@keyframes close{
+    from{transform: scaleY(1);}
+    to{transform: scaleY(0);}
+}
