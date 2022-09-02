@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+body{
+    height: 97vh;
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h1 { 
+     color: #EFEFEF;
+     font-family: 'Inconsolata', monospace; 
+     font-size: 3.2em;
+     text-align: center;
+}
+
+
+.container{
+    width: 45%;
+    height: 70%;
+
+    border-radius: 3px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.1em;
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
+    gap: 2px;
+}
+.input input{
+    width: 98%;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: white;
+    background: none;
+    outline: none;
+
+    padding-inline-start: 5px;
+}
+.input button{
+    width: 44px;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: white;
+    background: none;
+    cursor: pointer;
+}
+.input button:active{
+    background-color: white;
+    color: black;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.task-list{
+    color: white;
+    width: 100%;
+}
+.task-item{
+    display: none;
+
+    width: 100%;
+    height: fit-content;
+    min-height: 2.5em;
+    background-color: #ffffff17;
+    vertical-align: top;
+    justify-content: space-between;
+
+    margin-top: 4px;
+    padding: 15px;
+    border-radius: 5px;
+
+    gap: 5px;
+
+}
+.task{
+    display: flex;
+    align-items: center;
+}
+#taskText{
+    margin-left: 5px;
+    background: none;
+    border-style: none;
+    color: white;
+    
+    font-size: 1.1rem;
+    max-height: 100px;
+    width: 200%;
+
+    resize: none;
+    overflow: hidden;
+}
+#taskText:focus{
+    outline: none;
+}
+.action-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 2.3em;
+    height: fit-content;
+    gap: 4px;
+}
+.changing{
+    color: yellow;
+}
+
+.fa-trash-can:hover{
+    cursor: pointer;
+    color: red;
+}
+.fa-pen-to-square:hover{
+    cursor: pointer;
+    color: yellow;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.785);
+    opacity: 1;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.checked{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.changing{
+    color: yellow !important; 
+}
+
+@media (max-width:500px){
+    .container{
+        width: 90%;
+        height: 70%;
+    }
+    .action-buttons{
+        gap: 10px;
+        font-size: 1.25em;
+    }
+    .fa-pen-to-square:hover{
+        cursor: pointer;
+        color: white;
+    }
+}

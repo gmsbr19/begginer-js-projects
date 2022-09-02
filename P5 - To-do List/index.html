@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/294f71f033.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>To-do List</title>
+</head>
+<body>
+    <main>
+        <h1>My To-do List</h1>
+        <div class="container">
+            <form class="input" id="newTask">
+                <input id="input" type="text" value="" placeholder="Insira uma tarefa...">
+                <button type="submit" id="submitBtn" keyboar-focusable="false"><i class="fa-solid fa-plus"></i></button>
+            </form>
+            <ul class="task-list" id="task-list">
+                <li class="task-item" id="task">
+                    <div class="task">
+                        <input type="checkbox" id="checkbox">
+                        <textarea rows="1" cols="50%" type="text" value="Teste" readonly id="taskText" oninput="auto_grow(this)"></textarea>
+                    </div>
+                    <div class="action-buttons" id="actionBtns">
+                        <i class="fa-regular fa-pen-to-square" id="updateBtn"></i>
+                        <i class="fa-regular fa-trash-can" id="deleteBtn"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
